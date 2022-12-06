@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Mutant } from './Comonent/Mutant';
 
 function App() {
 
@@ -19,11 +20,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="btn" >
-          {name}<br />
-          {age}<br />
-          {inLove}
-        </div>
+        <Mutant name={name} age={age} isLove={inLove} getName={getName} />
       </header>
     </div>
   );
