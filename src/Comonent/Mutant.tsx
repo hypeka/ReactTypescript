@@ -1,4 +1,4 @@
-import * as React from 'react';
+import {ChangeEvent, FC, useState} from 'react';
 
 interface mutantProps{
     name:string,
@@ -7,11 +7,20 @@ interface mutantProps{
     getName: (name:string) => number
 }
 
-export const Mutant = (props:mutantProps) => {
+export const Mutant:FC<mutantProps> = ({name,age,isLove,getName}) => {
+
+    const [mutanto ,setMutanto] = useState<string | null>(" ");
+
+    const eventhandler = (event:ChangeEvent<HTMLInputElement>) => {
+        setMutanto(event.target.value)
+    }
+
   return (
     <div>
-      {props.name}
-      {props.age}
+      {name}
+      {age}
+      <input type="text" placeholder='happy mutanto' onChange={eventhandler} />
+      {mutanto}
     </div>
   );
 }
