@@ -3,21 +3,27 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const name:string = "mutant";
+  const age:number = 21
+  const inLove:boolean = true
+
+  const getName = (name:string):number => {
+    if(name === "mutant"){
+      return 21
+    }else{
+      return 0
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="btn" >
+          {name}<br />
+          {age}<br />
+          {inLove}
+        </div>
       </header>
     </div>
   );
