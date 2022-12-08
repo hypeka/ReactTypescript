@@ -1,15 +1,15 @@
 import {ChangeEvent, FC, useState} from 'react';
 
 interface mutantProps{
-    name:string,
-    age:number,
-    isLove:boolean
-    getName: (name:string) => number
+    name:string;
+    age:number;
+    isLove:boolean;
+    getName: (name:string) => number;
 }
 
 export const Mutant:FC<mutantProps> = ({name,age,isLove,getName}) => {
 
-    const [mutanto ,setMutanto] = useState<string | null>(" ");
+    const [mutanto ,setMutanto] = useState<null | string>(" ");
 
     const eventhandler = (event:ChangeEvent<HTMLInputElement>) => {
         setMutanto(event.target.value)
